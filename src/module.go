@@ -4,7 +4,7 @@
 	Функция public должна возвращать HTML код публичной части модуля,
 	функция admin, соответственно, HTML код административной части модуля
 	По завершении разработки соберите ваш модуль командой:
-	go build -buildmode=plugin -o my_module_name.so src/template.go
+	go build -buildmode=plugin -o my_module_name.so src/module.go
  */
 package main
 
