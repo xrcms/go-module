@@ -25,6 +25,7 @@ type Core struct {
 	Pages globals.Pageer
 	Cache globals.Cacher
 	Templates globals.Templateser
+	Fields globals.Fieldser
 	Modules globals.Modules
 }
 
@@ -48,7 +49,8 @@ func Init(ins []interface{}) *Core {
 	c.Pages          = ins[14].(globals.Pageer)
 	c.Cache          = ins[15].(globals.Cacher)
 	c.Templates      = ins[16].(globals.Templateser)
-	c.Modules        = ins[17].(globals.Modules)
+	c.Fields         = ins[17].(globals.Fieldser)
+	c.Modules        = ins[18].(globals.Modules)
 
 	return c
 }
