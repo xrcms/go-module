@@ -11,6 +11,7 @@ type Core struct {
 	Files globals.Fileser
 	Comments globals.Commentser
 	Infoblocks globals.Infoblocker
+	Directories globals.Directoryer
 	Groups globals.Groupser
 	Options globals.Optionser
 	Users globals.Userser
@@ -35,22 +36,23 @@ func Init(ins []interface{}) *Core {
 	c.Files          = ins[0].(globals.Fileser)
 	c.Comments       = ins[1].(globals.Commentser)
 	c.Infoblocks     = ins[2].(globals.Infoblocker)
-	c.Groups         = ins[3].(globals.Groupser)
-	c.Options        = ins[4].(globals.Optionser)
-	c.Users          = ins[5].(globals.Userser)
-	c.Session        = ins[6].(globals.Sessioner)
-	c.Cookies        = ins[7].(globals.Cookieser)
-	c.Output         = ins[8].(globals.Outputer)
-	c.Permissions    = ins[9].(globals.Permissionser)
-	c.Email          = ins[10].(globals.Emailer)
-	c.EmailTemplates = ins[11].(globals.EmailTemplateser)
-	c.Request        = ins[12].(globals.Requester)
-	c.DB             = ins[13].(globals.DataBaser)
-	c.Pages          = ins[14].(globals.Pageer)
-	c.Cache          = ins[15].(globals.Cacher)
-	c.Templates      = ins[16].(globals.Templateser)
-	c.Fields         = ins[17].(globals.Fieldser)
-	c.Modules        = ins[18].(globals.Modules)
+	c.Directories    = ins[3].(globals.Directoryer)
+	c.Groups         = ins[4].(globals.Groupser)
+	c.Options        = ins[5].(globals.Optionser)
+	c.Users          = ins[6].(globals.Userser)
+	c.Session        = ins[7].(globals.Sessioner)
+	c.Cookies        = ins[8].(globals.Cookieser)
+	c.Output         = ins[9].(globals.Outputer)
+	c.Permissions    = ins[10].(globals.Permissionser)
+	c.Email          = ins[11].(globals.Emailer)
+	c.EmailTemplates = ins[12].(globals.EmailTemplateser)
+	c.Request        = ins[13].(globals.Requester)
+	c.DB             = ins[14].(globals.DataBaser)
+	c.Pages          = ins[15].(globals.Pageer)
+	c.Cache          = ins[16].(globals.Cacher)
+	c.Templates      = ins[17].(globals.Templateser)
+	c.Fields         = ins[18].(globals.Fieldser)
+	c.Modules        = ins[19].(globals.Modules)
 
 	return c
 }
